@@ -1,0 +1,165 @@
+.cont .bt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 110px;
+    left: 37%;
+    position: fixed;
+}
+
+.bck #bk {
+    display: flex;
+    width: 55px;
+    position: fixed;
+    top: 10px;
+    left: 25px;
+}
+
+.cont .bt #b {
+    margin-right: 30px;
+    margin-top: 0;
+}
+
+.inp {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.inp #intp {
+    width: 600px;
+    height: 50px;
+    border-radius: 15px;
+    padding-left: 15px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.inp .SubMit {
+    width: 60px;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden-image {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 300px; 
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    z-index: 50;
+}
+.visible {
+    opacity: 1;
+}
+
+.output {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 150px white;
+    border-top: 3px solid;
+    top: 100px;
+    width: 780px;
+    left: 300px;
+    padding: 0;
+}
+
+.output #oup p {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    left: 320px;
+    top: 130px;
+    color: black;
+}
+
+#oup .textContent::after {
+    content: '|';
+    animation: blink 0.5s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .inp {
+        width: 90%;
+    }
+
+    .inp #intp {
+        width: 75%;
+    }
+
+    .inp .SubMit {
+        width: 50px;
+        margin-left: 10px;
+    }
+
+    .output {
+        width: 90%;
+        left: 5%;
+    }
+
+    .output #oup p {
+        left: 10%;
+        top: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inp #intp {
+        width: 70%;
+    }
+
+    .inp .SubMit {
+        width: 50px;
+        margin-left: 8px;
+    }
+
+    .output {
+        width: 95%;
+        left: 2.5%;
+    }
+
+    .output #oup p {
+        left: 10%;
+        top: 120px;
+    }
+}
+
+@media (max-width: 375px) {
+    .inp #intp {
+        width: 60%;
+    }
+
+    .inp .SubMit {
+        width: 50px;
+        margin-left: 6px;
+    }
+
+    .output {
+        width: 90%;
+        left: 5%;
+    }
+
+    .output #oup p {
+        left: 10%;
+        top: 120px;
+    }
+}
